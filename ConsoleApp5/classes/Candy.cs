@@ -10,11 +10,16 @@ namespace ConsoleApp5.classes
     public class Candy : Sweet
     {
         public TypeOfCandy TypeOfCandy;
-        public Candy(string name, double weight, string typeOfSweetness, double sugar, double colories,
-            string item_info, TypeOfCandy typeOfCandy) : base(name, weight, typeOfSweetness, sugar, colories, item_info)
+        public Candy(string name, double weight, double sugar, double colories,
+             TypeOfCandy typeOfCandy) : base(name, weight,  sugar, colories)
         {
             TypeOfCandy = typeOfCandy;
-            typeOfSweetness = "Candy";
+            
         }
+
+        public override string TypeOfSweetness => "Candy";
+
+
+        public override string ItemInfo => string.Format("{0}, weight: {1}, sugar: {2}, coloriess: {3}", Name, Colories, Vec, SugarPerUnit);
     }
 }

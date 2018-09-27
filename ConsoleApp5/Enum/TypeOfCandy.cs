@@ -12,6 +12,7 @@ namespace ConsoleApp5.Enum
         Caramel,
         Iric,
         Lollipop,
-        Milk
+        Milk,
+        Dgele
     }
 }

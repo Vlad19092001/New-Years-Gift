@@ -11,11 +11,15 @@ namespace ConsoleApp5.classes
     public class Chocolate : Sweet
     {
         public TypeOfChocolate TypeOfChocolate;
-        public Chocolate(string name, double weight, string typeOfSweetness, double sugar, double colories,
-            string item_info, TypeOfChocolate typeOfChocolate) : base(name, weight, typeOfSweetness, sugar, colories, item_info)
+        public Chocolate(string name, double weight, double sugar, double colories
+            , TypeOfChocolate typeOfChocolate) : base(name, weight, sugar, colories)
         {
             TypeOfChocolate = typeOfChocolate;
-            typeOfSweetness = "Chocolate";
+            
         }
+        
+        public override string TypeOfSweetness => "Chocolate";
+
+        public override string ItemInfo => string.Format("{0}, weight: {1}, sugar: {2}, coloriess: {3}", Name, Colories, Vec, SugarPerUnit);
     }
 }
