@@ -12,6 +12,9 @@ namespace ConsoleApp5.interfaces
         double Vec { get; }
         int CountOfSweet { get; }
         string NameGift { get; }
+        IEnumerable<ISweetness> Items { get; }
+        IEnumerable<ISweetness> SortSweetnessByWeight();
+        IEnumerable<ISweetness> FindSweetnessBySugar(int min, int max);
         void AddSweet(Sweet sweet);
         void RemoveSweet(Sweet sweet);
     }

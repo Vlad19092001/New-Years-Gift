@@ -10,21 +10,44 @@ namespace ConsoleApp5.classes
     public class Gift : IGift
 
     {
-        public double Vec { get; }
+        private ICollection<ISweetness> sweetnessitems;
+        public IEnumerable<ISweetness> Items
+        {
+            get { return sweetnessitems; }
+        }
 
-        public int CountOfSweet { get; }
+       
 
         public string NameGift { get; }
 
-        public Gift(double vec, int countofsweet, string namegift)
+        public double Vec => throw new NotImplementedException();
+
+        public int CountOfSweet => throw new NotImplementedException();
+
+        public Gift (string namegift, ICollection<ISweetness> items)
         {
-            Vec = vec;
-            CountOfSweet = countofsweet;
+
+            sweetnessitems = items;
             NameGift = namegift;
 
         }
 
-        void IGift.AddSweet(Sweet sweet)
+       public void AddSweet(Sweet sweet)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveSweet(Sweet sweet)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<ISweetness> SortSweetnessByWeight()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<ISweetness> FindSweetnessBySugar(int min, int max)
         {
             throw new NotImplementedException();
         }
