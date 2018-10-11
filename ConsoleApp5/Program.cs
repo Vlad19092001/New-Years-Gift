@@ -30,6 +30,7 @@ namespace ConsoleApp5
             Console.WriteLine(chocolate.ItemInfo);
             Console.ReadKey();
 
+            Console.ReadKey();
 
         }
     }
